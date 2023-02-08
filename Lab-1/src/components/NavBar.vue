@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Star Wars</a>
+      <a class="navbar-brand" href="#">Star Wars Fetch</a>
       <button
         class="navbar-toggler"
         type="button"

@@ -6,7 +6,6 @@
 
   font-weight: normal;
 }
-
 a,
 .green {
   text-decoration: none;
@@ -19,3 +18,8 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+  body {
+    background-image: url("src/assets/images/coruscant.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+  }

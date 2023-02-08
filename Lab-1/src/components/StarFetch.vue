@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <button @click="fetchCharacters">Fetch Characters</button>
-    <div v-if="loading">Loading...</div>
+  <div class="buttonClass">
+    <button class="button" @click="fetchCharacters">Fetch Characters</button>
+    <div v-if="loading">
+      <p style="color: white;">Loading...</p>
+    </div>
+    <!-- print the character cards if they're not still loding -->
     <div v-else>
       <div class="character-cards">
         <div
@@ -16,7 +19,7 @@
     </div>
   </div>
 </template>
-
+    <!-- fancy css for fancy cards -->
 <style scoped>
 .character-cards {
   display: flex;
@@ -27,6 +30,7 @@
   width: 200px;
   margin: 10px;
   text-align: center;
+  background-color: white;
 }
 </style>
 
@@ -40,12 +44,13 @@ export default {
       loading: false,
     };
   },
+  
   methods: {
     fetchCharacters() {
       this.loading = true;
       const promises = [];
       for (let i = 0; i < 10; i++) {
-        const randomNumber = Math.floor(Math.random() * 88) + 1;
+        const randomNumber = Math.floor(Math.random() * 50) + 1;
         promises.push(
           axios.get(`https://swapi.dev/api/people/${randomNumber}/`)
         );
