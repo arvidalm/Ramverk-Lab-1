@@ -1,3 +1,4 @@
+<!-- a component for the logo-->
 <template>
   <div class="logo-container">
     <img

@@ -1,3 +1,4 @@
+<!-- a bootstrap navbar component -->
 <script setup>
 defineProps({
   msg: {
