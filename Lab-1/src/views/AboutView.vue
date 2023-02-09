@@ -1,6 +1,9 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
 import LogoComponent from "../components/LogoComponent.vue";
+import QuestionComp from "../components/QuestionComp.vue";
+import CustomEvent from "../components/CustomEvent.vue";
+import StarProp from "../components/StarProp.vue";
 </script>
 
 <template>
@@ -9,18 +12,8 @@ import LogoComponent from "../components/LogoComponent.vue";
   <div class="text-block">
     <p>This page is for extremely important information</p>
   </div>
+  <QuestionComp></QuestionComp>
   <div>
-    <div>
-      <p style="color: white">Whos your favourite character?</p>
-      <form>
-        <input type="text" v-model="inputValue" />
-      </form>
-      <button @click="showResult = true">Submit your fav character!</button>
-      <p style="color: white" v-if="showResult">
-        Are you kidding me? {{ inputValue }} is the worst character ever and
-        almost ruined the franchise. Shame.
-      </p>
-    </div>
     <div class="card-container">
       <div class="card">
         <img
@@ -39,16 +32,11 @@ import LogoComponent from "../components/LogoComponent.vue";
     </div>
   </div>
   <!-- props -->
-  <StarProp
-    :number="1977"
-    :message="'Was the year the first Star Wars movie was released'"
-  />
+  <StarProp :Year="1977" :Quote="'No... I, am your father.'" />
   <custom-event @custom-event="handleCustomEvent"></custom-event>
 </template>
 
 <script>
-import CustomEvent from "../components/CustomEvent.vue";
-import StarProp from "../components/StarProp.vue";
 export default {
   data() {
     return {
@@ -69,7 +57,6 @@ export default {
   display: flex;
   justify-content: center;
 }
-
 .card {
   width: 300px;
   height: 250px;

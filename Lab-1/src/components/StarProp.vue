@@ -2,8 +2,8 @@
 <template>
   <div>
     <!-- two props -->
-    <p style="color: white">Number: {{ number }}</p>
-    <p style="color: white">Message: {{ message }}</p>
+    <p style="color: white">Year: {{ Year }}</p>
+    <p style="color: white">Quote: {{ Quote }}</p>
     <button @click="logProps">Send the props to the console</button>
   </div>
 </template>
@@ -12,11 +12,11 @@
 export default {
   //make the props typsäkra hehe
   props: {
-    number: {
+    Year: {
       type: Number,
       required: true,
     },
-    message: {
+    Quote: {
       type: String,
       required: true,
     },
@@ -24,8 +24,8 @@ export default {
   methods: {
     //console log the props
     logProps() {
-      console.log("Number:", this.number);
-      console.log("Message:", this.message);
+      console.log("Year:", this.Year);
+      console.log("Quote:", this.Quote);
     },
   },
 };
